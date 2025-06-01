@@ -2,7 +2,7 @@ import { InputHTMLAttributes, forwardRef } from "react"
 import { cn } from "@renderer/lib/utils"
 import { motion } from "framer-motion"
 
-interface InputChatProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputChatProps extends InputHTMLAttributes<HTMLInputElement> { }
 
 export const InputChat = forwardRef<HTMLInputElement, InputChatProps>(
   ({ className, ...props }, ref) => {
@@ -16,9 +16,8 @@ export const InputChat = forwardRef<HTMLInputElement, InputChatProps>(
         <input
           ref={ref}
           type="text"
-          placeholder="Ask me anything..."
           className={cn(
-            "w-full rounded-xl border-2 border-[hsl(var(--border))] bg-[hsl(var(--card))] px-5 py-3 text-[hsl(var(--foreground))] placeholder:text-[hsl(var(--muted-foreground))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:border-transparent backdrop-blur-sm transition-all duration-300 shadow-sm hover:shadow-md",
+            "w-full input border-2 border-[hsl(var(--border))] bg-[hsl(var(--card))] px-5 py-3 text-[hsl(var(--foreground))] placeholder:text-[hsl(var(--muted-foreground))] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:border-transparent backdrop-blur-sm transition-all duration-300 shadow-sm hover:shadow-md text-xs",
             "dark:bg-[hsl(var(--card)/80%)]",
             className
           )}

@@ -2,49 +2,50 @@
 @plugin "daisyui";
 
 :root {
-  --background: 210 26% 98%;
-  --foreground: 210 15% 22%;
-  --card: 210 26% 98%;
-  --card-foreground: 210 15% 22%;
-  --popover: 210 26% 98%;
-  --popover-foreground: 210 15% 22%;
-  --primary: 212 100% 38%;
+  --background: 220 20% 98%;
+  --foreground: 220 25% 20%;
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary: 206 81% 43%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 16% 93%;
-  --secondary-foreground: 210 8% 45%;
-  --muted: 210 16% 93%;
-  --muted-foreground: 210 8% 60%;
-  --accent: 210 16% 93%;
-  --accent-foreground: 210 8% 45%;
-  --destructive: 0 80% 60%;
+  --secondary: 220 15% 95%;
+  --secondary-foreground: var(--foreground);
+  --muted: 220 15% 90%;
+  --muted-foreground: 220 15% 50%;
+  --accent: 220 15% 90%;
+  --accent-foreground: var(--foreground);
+  --destructive: 0 70% 50%;
   --destructive-foreground: 210 40% 98%;
-  --border: 210 16% 80%;
-  --input: 210 16% 80%;
-  --ring: 212 100% 38%;
+  --border: 220 15% 85%;
+  --input: 220 15% 90%;
+  --ring: var(--primary);
   --radius: 0.3rem;
 }
 
 .dark {
-  --background: 210 15% 18%;
+  --background: 220 15% 15%;
   --foreground: 210 40% 98%;
-  --card: 210 15% 22%;
-  --card-foreground: 210 40% 98%;
-  --popover: 210 15% 22%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 212 100% 58%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 20% 30%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 210 20% 30%;
-  --muted-foreground: 210 30% 60%;
-  --accent: 210 20% 30%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 70% 40%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 210 25% 30%;
-  --input: 210 25% 30%;
-  --ring: 212 100% 58%;
+  --card: 220 15% 20%;
+  --card-foreground: var(--foreground);
+  --popover: 220 15% 20%;
+  --popover-foreground: var(--foreground);
+  --primary: 206 81% 63%;
+  --primary-foreground: 210 15% 15%;
+  --secondary: 220 15% 25%;
+  --secondary-foreground: var(--foreground);
+  --muted: 220 15% 30%;
+  --muted-foreground: 210 30% 70%;
+  --accent: 220 15% 30%;
+  --accent-foreground: var(--foreground);
+  --destructive: 0 70% 60%;
+  --destructive-foreground: 210 15% 15%;
+  --border: 220 15% 35%;
+  --input: 220 15% 30%;
+  --ring: var(--primary);
 }
+
 body {
   min-height: 100vh;
   background: var(--background);
