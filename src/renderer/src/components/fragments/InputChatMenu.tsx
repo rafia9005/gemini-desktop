@@ -3,8 +3,11 @@ import { InputChat } from "../elements/Input"
 import { motion } from "framer-motion"
 import { Button } from "../elements/Button"
 import { Send } from "lucide-react"
+import { storeGemini } from "@renderer/stores/stores"
 
-export function InputChatMenu() {
+
+
+export function InputChatMenu({ onFirstInput }: { onFirstInput?: () => void }) {
   const [input, setInput] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -12,10 +15,15 @@ export function InputChatMenu() {
     e.preventDefault()
     if (!input.trim()) return
 
+    onFirstInput?.()
+
     setIsSubmitting(true)
     try {
-      await new Promise(resolve => setTimeout(resolve, 800))
+      const result = await storeGemini(input)
+      console.log("Result from Gemini:", result)
       setInput("")
+    } catch (error) {
+      console.error("Error submitting input:", error)
     } finally {
       setIsSubmitting(false)
     }
@@ -31,11 +39,7 @@ export function InputChatMenu() {
         autoFocus
         disabled={isSubmitting}
       />
-
-      <Button
-        type="submit"
-        disabled={isSubmitting || !input.trim()}
-      >
+      <Button type="submit" disabled={isSubmitting || !input.trim()}>
         {isSubmitting ? (
           <span key="loading" className="loading loading-spinner loading-sm" />
         ) : (
@@ -52,4 +56,3 @@ export function InputChatMenu() {
     </form>
   )
 }
-

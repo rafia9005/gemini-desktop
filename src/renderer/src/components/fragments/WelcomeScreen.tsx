@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { InputChatMenu } from "./InputChatMenu"
 
-export function WelcomeScreen() {
+export function WelcomeScreen({ onFirstInput }: { onFirstInput: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center p-2">
       <motion.div
@@ -23,7 +23,7 @@ export function WelcomeScreen() {
               Ask me anything, and I'll try to help!
             </p>
           </motion.div>
-          <InputChatMenu />
+          <InputChatMenu onFirstInput={onFirstInput} />
         </div>
       </motion.div>
     </div>
