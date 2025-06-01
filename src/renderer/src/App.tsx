@@ -1,9 +1,13 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './assets/main.css'
 
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import Index from './pages/Index'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-  </StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Index />} />
+    </Routes>
+  </BrowserRouter>
 )
