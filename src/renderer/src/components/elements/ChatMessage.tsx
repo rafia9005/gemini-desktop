@@ -17,7 +17,7 @@ export function ChatMessage({ isUser = false, text }: ChatMessageProps) {
           ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] self-end rounded-br-none ml-8"
           : "bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))] self-start rounded-bl-none mr-8"
         }
-        shadow-sm transition-all duration-100 ease-out
+        shadow-sm transition-all duration-100
       `}
       style={{ wordBreak: "break-word" }}
     >
