@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: bright <brightness-value>"
+    echo "Example: bright 1.2"
+    exit 1
+fi
+
+xrandr --output eDP --brightness "$1"
+
